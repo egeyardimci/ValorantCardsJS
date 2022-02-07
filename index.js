@@ -1,17 +1,42 @@
-function createHtmlItem(elementType,aclass,id,name,style){
-    let newElement = document.createElement(elementType);
-    
-    newElement.id = id;
-    newElement.name = name;
-    newElement.style = style;
+let ap =fetch('https://valorant-api.com/v1/agents')
+  .then(response => response.json())
+  .then(
+        function(data){
+            console.log(data.data);
+            createNewCard(data.data);
+        });
 
-    return newElement;
+function createNewCardHTML(imgSrc,agentName,agentUsage){
+    let newCard = document.createElement("div");
+    newCard.className = "card";
+    newCard.id = "card";
+
+    let newCardImage = document.createElement("img");
+    newCardImage.src = imgSrc;
+    newCardImage.className = "charPhoto"
+
+    let newCardText = document.createElement("p");
+    let text = document.createTextNode(agentName);
+    newCardText.style = "color: lemonchiffon;font-size: 25px;";
+    newCardText.appendChild(text);
+
+    let newCardDescription = document.createElement("p");
+    let textDes = document.createTextNode(agentUsage);
+    newCardDescription.appendChild(textDes);
+
+    newCard.appendChild(newCardImage);
+    newCard.appendChild(newCardText);
+    newCard.appendChild(newCardDescription);
+
+    return newCard;
 }
 
-let app = document.getElementById("app");
-console.log(app);
-
-let card = createHtmlItem("div","card","","");
-
-app.appendChild(card);
-console.log(card);
+function createNewCard(apiData){
+    apiData.forEach(element => {
+        if(element.isPlayableCharacter == true){
+            let card = createNewCardHTML(element.fullPortrait,element.displayName,element.description);
+            card.style = ("background-image: url('"+element.background+"')");
+            app.appendChild(card);
+        }
+    });
+}
