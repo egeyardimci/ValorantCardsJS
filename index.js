@@ -2,7 +2,6 @@ let ap =fetch('https://valorant-api.com/v1/agents')
   .then(response => response.json())
   .then(
         function(data){
-            console.log(data.data);
             createNewCard(data.data);
         });
 
