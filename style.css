@@ -82,6 +82,26 @@ button:hover{
 }
 
 .backSide{
+	
+	height: 500px;
+	text-align:center;
 	margin: auto;
-	display: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-evenly;
+    justify-content: center;
+}
+
+.abilityContainer{
+	display:flex;
+}
+
+.abilityImage{
+	height: 65px;
+	width: 65px;
+}
+
+.agentRoleElement{
+	color: lemonchiffon;
+	font-size: 25px;
 }
