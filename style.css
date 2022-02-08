@@ -25,7 +25,6 @@ button:hover{
 
 .headText{
     font-size: 3.5rem;
-    width: 400px;
     margin: auto;
     text-align: center;
     transition: transform 250ms;
