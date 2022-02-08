@@ -22,10 +22,21 @@ function createNewCardHTML(imgSrc,agentName,agentUsage){
     let newCardDescription = document.createElement("p");
     let textDes = document.createTextNode(agentUsage);
     newCardDescription.appendChild(textDes);
+	
+	let frontSide = document.createElement("div");
+	frontSide.className = "frontSide";
+	
+	let backSide = document.createElement("div");
+	let text1 = document.createTextNode("DENEME");
+	backSide.className = "backSide";
+	backSide.appendChild(text1);
 
-    newCard.appendChild(newCardImage);
-    newCard.appendChild(newCardText);
-    newCard.appendChild(newCardDescription);
+    frontSide.appendChild(newCardImage);
+    frontSide.appendChild(newCardText);
+    frontSide.appendChild(newCardDescription);
+	newCard.appendChild(frontSide);
+	newCard.appendChild(backSide);
+
 
     return newCard;
 }

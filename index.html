@@ -11,5 +11,17 @@
 <body>
     <div class="app" id="app">
     <script src="index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $(".card").hover(function(){
+		$(this).children(".frontSide").hide();
+		$(this).children(".backSide").show();
+	  },function(){
+		$(this).children(".frontSide").show();
+		$(this).children(".backSide").hide();
+	  });
+	});
+	</script>
 </body>
 </html>

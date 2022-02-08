@@ -80,3 +80,8 @@ button:hover{
 .charName{
 	margin-top: 30px;
 }
+
+.backSide{
+	margin: auto;
+	display: none;
+}
