@@ -1,9 +1,0 @@
-	$(document).ready(function(){
-	  $(".card").hover(function(){
-		$(this).children(".frontSide").hide();
-		$(this).children(".backSide").show();
-	  },function(){
-		$(this).children(".frontSide").show();
-		$(this).children(".backSide").hide();
-	  });
-	});
