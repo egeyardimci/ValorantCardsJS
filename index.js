@@ -29,7 +29,6 @@ function createNewCardHTML(imgSrc,agentName,agentUsage,agentSkills,agentRole,age
 	
     let backSide = document.createElement("div");
     backSide.className = "backSide";
-    backSide.style= "display : none;";
 	
     let newAbilityContainer = document.createElement("div");
     newAbilityContainer.className = "abilityContainer";
