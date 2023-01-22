@@ -37,6 +37,9 @@ button {
 }
 
 .card {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
   width: 280px;
   padding: 10px;
   height: 520px;
@@ -74,12 +77,12 @@ button {
   display: flex;
 }
 
-.charPhoto {
+.weaponPhoto {
   width: 250px;
-  height: 215px;
+  height: 100px;
 }
 
-.charName {
+.weaponName {
   margin-top: 30px;
 }
 

@@ -70,7 +70,6 @@ function createNewCard(apiData){
     apiData.forEach(element => {
         if(element.isPlayableCharacter == true){
             let card = createNewCardHTML(element.fullPortrait,element.displayName,element.description,element.abilities,element.role.displayName,element.role.displayIcon);
-            card.style = ("background-image: url('"+element.background+"')");
             app.appendChild(card);
         }
     });
