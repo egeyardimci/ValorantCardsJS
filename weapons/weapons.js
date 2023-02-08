@@ -40,7 +40,12 @@ function createNewCardHTML(displayName,displayIcon,category,cost){
 
 function createNewCard(apiData){
     apiData.forEach(element => {
+        try{
         let card = createNewCardHTML(element.displayName,element.displayIcon,element.shopData.categoryText,element.shopData.cost);
         app.appendChild(card);
+        }
+        catch(err){
+            console.log(element.displayName);
+        }
     });
 }
